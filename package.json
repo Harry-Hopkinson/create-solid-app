@@ -1,0 +1,43 @@
+{
+  "name": "create-solid-app",
+  "version": "1.0.1",
+  "description": "CLI to create a Solid Application.",
+  "main": "dist/index.js",
+  "bin": {
+    "create-docusaurus": "dist/index.js"
+  },
+  "scripts": {
+    "javascript": "node dist/index.js",
+    "typescript": "ts-node src/index.ts",
+    "format": "prettier --write .",
+    "check-format": "prettier --check ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Harry-Hopkinson/create-docusaurus.git"
+  },
+  "keywords": [
+    "create-solid",
+    "cli",
+    "solid",
+    "react",
+    "code-generation"
+  ],
+  "author": "harry-hopkinson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Harry-Hopkinson/create-solid-app/issues"
+  },
+  "dependencies": {
+    "kolorist": "^1.5.1",
+    "minimist": "^1.2.6",
+    "prettier": "^2.6.2",
+    "prompts": "^2.4.2",
+    "typescript": "^4.6.4"
+  },
+  "homepage": "https://github.com/Harry-Hopkinson/create-solid-app#readme",
+  "devDependencies": {
+    "@types/node": "^17.0.39",
+    "ts-node": "^10.8.1"
+  }
+}
