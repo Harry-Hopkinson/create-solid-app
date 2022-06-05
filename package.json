@@ -9,7 +9,6 @@
   "scripts": {
     "javascript": "node src/index.js",
     "typescript": "ts-node src/index.ts",
-    "format": "prettier --write .",
     "lint": "eslint src --ext ts && prettier --check .",
     "lint:fix": "eslint src --ext ts --fix && prettier --write ."
   },
