@@ -1,6 +1,6 @@
-# create-docusaurus-app
+# create-solid-app
 
-CLI to create a Docusaurus Project.
+CLI to create a Solid Application.
 
 ## Usage
 
