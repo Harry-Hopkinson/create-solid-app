@@ -1,0 +1,14 @@
+src/js-vitest
+src/template-vanilla
+src/template-vanilla-ts
+src/ts-bootstrap
+src/ts-jest
+src/ts-minimal
+src/ts-router
+src/ts-sass
+src/ts-tailwindcss
+src/ts-unocss
+src/ts-uvu
+src/ts-vitest
+src/ts-windicss
+dist

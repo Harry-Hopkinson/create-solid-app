@@ -9,7 +9,8 @@
   "scripts": {
     "typescript": "ts-node src/index.ts",
     "format": "prettier --write .",
-    "check-format": "prettier --check ."
+    "lint": "eslint src --ext ts && prettier --check .",
+    "lint:fix": "eslint src --ext ts --fix && prettier --write ."
   },
   "repository": {
     "type": "git",
@@ -28,6 +29,8 @@
     "url": "https://github.com/Harry-Hopkinson/create-solid-app/issues"
   },
   "dependencies": {
+    "@typescript-eslint/parser": "^5.27.0",
+    "eslint": "^8.17.0",
     "kolorist": "^1.5.1",
     "minimist": "^1.2.6",
     "prettier": "^2.6.2",
@@ -37,6 +40,8 @@
   "homepage": "https://github.com/Harry-Hopkinson/create-solid-app#readme",
   "devDependencies": {
     "@types/node": "17.0.39",
+    "@typescript-eslint/eslint-plugin": "^5.27.0",
+    "eslint-plugin-unused-imports": "^2.0.0",
     "ts-node": "10.8.1"
   }
 }

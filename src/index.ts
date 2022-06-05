@@ -253,7 +253,9 @@ function emptyDir(dir: any) {
  * @returns object | undefined
  */
 function pkgFromUserAgent(userAgent: string | undefined) {
-  if (!userAgent) return undefined;
+  if (!userAgent) {
+    return undefined;
+  }
   const pkgSpec = userAgent.split(" ")[0];
   const pkgSpecArr = pkgSpec.split("/");
   return {
