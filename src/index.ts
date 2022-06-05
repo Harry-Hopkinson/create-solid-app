@@ -23,22 +23,15 @@ const frameWorks = [
       },
     ],
   },
-  {
-    name: "typescript",
-    colour: blue,
-    variants: [
-      {
-        name: "typescript",
-        display: "Typescript",
-        colour: blue,
-      },
-    ],
-  },
 ];
 
 const TEMPLATES = frameWorks
-  .map((f) => (f.variants && f.variants.map((v) => v.name)) || [f.name])
-  .reduce((a, b) => a.concat(b), []);
+  .map((f): string[] => {
+    return (f.variants && f.variants.map((v) => v.name)) || [f.name];
+  })
+  .reduce((a, b): string[] => {
+    return a.concat(b);
+  }, []);
 
 const renameFiles = {
   _gitignore: ".gitignore",
