@@ -2,13 +2,32 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "commonjs",
-    "rootDir": "./src",
+    "rootDir": "./src/index.ts",
     "allowJs": true,
     "checkJs": true,
-    "outDir": "dist",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
-    "skipLibCheck": true
-  }
+    "skipLibCheck": true,
+    "sourceRoot": "./src/index.ts",
+    "inlineSourceMap": true
+  },
+  "include": ["./src/index.ts"],
+  "exclude": [
+    "./node_modules",
+    "./dist",
+    "./src/js-vitest",
+    "src/template-vanilla",
+    "src/template-vanilla-ts",
+    "src/ts-bootstrap",
+    "src/ts-jest",
+    "src/ts-minimal",
+    "src/ts-router",
+    "src/ts-sass",
+    "src/ts-tailwindcss",
+    "src/ts-unocss",
+    "src/ts-uvu",
+    "src/ts-vitest",
+    "src/ts-windicss"
+  ]
 }
