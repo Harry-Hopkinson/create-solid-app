@@ -8,17 +8,17 @@ const cwd = process.cwd();
 
 const frameWorks = [
   {
-    name: "javascript",
+    name: "vanilla",
     colour: yellow,
     variants: [
       {
-        name: "classic",
-        display: "Classic",
+        name: "vanilla",
+        display: "JavaScript",
         colour: yellow,
       },
       {
-        name: "facebook",
-        display: "Facebook",
+        name: "vanilla-ts",
+        display: "TypeScript",
         colour: blue,
       },
     ],
