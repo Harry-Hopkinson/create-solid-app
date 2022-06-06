@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const argv = require("minimist")(process.argv.slice(2), { string: ["_"] });
 const prompts = require("prompts");
-const { yellow, blue, red, reset } = require("kolorist");
+const { red, reset } = require("kolorist");
 import { frameWorks } from "../lib/frameWorks";
 
 const cwd = process.cwd();
