@@ -3,27 +3,9 @@ const path = require("path");
 const argv = require("minimist")(process.argv.slice(2), { string: ["_"] });
 const prompts = require("prompts");
 const { yellow, blue, red, reset } = require("kolorist");
+import { frameWorks } from "../lib/frameWorks";
 
 const cwd = process.cwd();
-
-const frameWorks = [
-  {
-    name: "vanilla",
-    colour: yellow,
-    variants: [
-      {
-        name: "vanilla",
-        display: "JavaScript",
-        colour: yellow,
-      },
-      {
-        name: "vanilla-ts",
-        display: "TypeScript",
-        colour: blue,
-      },
-    ],
-  },
-];
 
 const TEMPLATES = frameWorks
   .map((f): string[] => {

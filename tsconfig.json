@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "commonjs",
-    "rootDir": "./src/index.ts",
+    "rootDirs": ["./src/index.ts", "./lib/**/*.ts"],
     "allowJs": true,
     "checkJs": true,
     "esModuleInterop": true,
@@ -26,6 +26,7 @@
     "src/ts-unocss",
     "src/ts-uvu",
     "src/ts-vitest",
-    "src/ts-windicss"
+    "src/ts-windicss",
+    "lib"
   ]
 }
