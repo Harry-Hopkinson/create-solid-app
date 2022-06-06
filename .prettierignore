@@ -1,7 +1,8 @@
 src/template-js-vitest
 src/template-vanilla
 src/template-vanilla-ts
-src/ts-bootstrap
+src/template-ts-bootstrap
+src/template-js-bootstrap
 src/ts-jest
 src/ts-minimal
 src/ts-router
