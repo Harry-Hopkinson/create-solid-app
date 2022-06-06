@@ -1,3 +1,5 @@
+import { green } from "kolorist";
+
 const { yellow, blue } = require("kolorist");
 
 export const frameWorks = [
@@ -12,6 +14,22 @@ export const frameWorks = [
       },
       {
         name: "vanilla-ts",
+        display: "TypeScript",
+        colour: blue,
+      },
+    ],
+  },
+  {
+    name: "vitest",
+    colour: green,
+    variants: [
+      {
+        name: "js-vitest",
+        display: "JavaScript",
+        colour: yellow,
+      },
+      {
+        name: "ts-vitest",
         display: "TypeScript",
         colour: blue,
       },
