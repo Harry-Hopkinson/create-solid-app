@@ -5,7 +5,6 @@ const prompts = require("prompts");
 const { red, reset } = require("kolorist");
 import { frameWorks } from "../lib/frameWorks.js";
 import { TEMPLATES } from "../lib/templates.js";
-import { copy } from "../lib/copy.js";
 import { isValidPackageName, toValidPackageName } from "../lib/packageName.js";
 import { pkgFromUserAgent } from "../lib/pkg.js";
 
@@ -171,6 +170,15 @@ export function copyDir(srcDir: any, destDir: any) {
     const srcFile = path.resolve(srcDir, file);
     const destFile = path.resolve(destDir, file);
     copy(srcFile, destFile);
+  }
+}
+
+function copy(src: any, dest: any) {
+  const stat = fs.statSync(src);
+  if (stat.isDirectory()) {
+    copyDir(src, dest);
+  } else {
+    fs.copyFileSync(src, dest);
   }
 }
 

@@ -6,33 +6,14 @@ const path = require("path");
 const argv = require("minimist")(process.argv.slice(2), { string: ["_"] });
 const prompts = require("prompts");
 const { red, reset } = require("kolorist");
-const { yellow, blue } = require("kolorist");
+const frameWorks_js_1 = require("../lib/frameWorks.js");
 const templates_js_1 = require("../lib/templates.js");
-const copy_js_1 = require("../lib/copy.js");
 const packageName_js_1 = require("../lib/packageName.js");
 const pkg_js_1 = require("../lib/pkg.js");
 const cwd = process.cwd();
 const renameFiles = {
     _gitignore: ".gitignore",
 };
-const frameWorks = [
-    {
-        name: "vanilla",
-        colour: yellow,
-        variants: [
-            {
-                name: "vanilla",
-                display: "JavaScript",
-                colour: yellow,
-            },
-            {
-                name: "vanilla-ts",
-                display: "TypeScript",
-                colour: blue,
-            },
-        ],
-    },
-];
 async function createApp() {
     let targetDir = argv._[0];
     let template = argv.template || argv.t;
@@ -79,7 +60,7 @@ async function createApp() {
                     ? reset(`"${template}" isn't a valid template. Please choose from below: `)
                     : reset("Select a framework:"),
                 initial: 0,
-                choices: frameWorks.map((framework) => {
+                choices: frameWorks_js_1.frameWorks.map((framework) => {
                     const frameworkColor = framework.colour;
                     return {
                         title: frameworkColor(framework.name),
@@ -131,7 +112,7 @@ async function createApp() {
             fs.writeFileSync(targetPath, content);
         }
         else {
-            (0, copy_js_1.copy)(path.join(templateDir, file), targetPath);
+            copy(path.join(templateDir, file), targetPath);
         }
     };
     const files = fs.readdirSync(templateDir);
@@ -164,10 +145,19 @@ function copyDir(srcDir, destDir) {
     for (const file of fs.readdirSync(srcDir)) {
         const srcFile = path.resolve(srcDir, file);
         const destFile = path.resolve(destDir, file);
-        (0, copy_js_1.copy)(srcFile, destFile);
+        copy(srcFile, destFile);
     }
 }
 exports.copyDir = copyDir;
+function copy(src, dest) {
+    const stat = fs.statSync(src);
+    if (stat.isDirectory()) {
+        copyDir(src, dest);
+    }
+    else {
+        fs.copyFileSync(src, dest);
+    }
+}
 function isEmpty(path) {
     const files = fs.readdirSync(path);
     return files.length === 0 || (files.length === 1 && files[0] === ".git");
