@@ -3,7 +3,8 @@ src/template-vanilla
 src/template-vanilla-ts
 src/template-ts-bootstrap
 src/template-js-bootstrap
-src/ts-jest
+src/template-ts-jest
+src/template-js-jest
 src/ts-minimal
 src/ts-router
 src/ts-sass
