@@ -12,3 +12,4 @@ src/ts-uvu
 src/ts-vitest
 src/ts-windicss
 dist
+src/index.js

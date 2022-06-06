@@ -3,23 +3,18 @@ const path = require("path");
 const argv = require("minimist")(process.argv.slice(2), { string: ["_"] });
 const prompts = require("prompts");
 const { red, reset } = require("kolorist");
-import { frameWorks } from "../lib/frameWorks";
+import { frameWorks } from "../lib/frameWorks.js";
+import { TEMPLATES } from "../lib/templates.js";
+import { copy } from "../lib/copy.js";
+import { isValidPackageName, toValidPackageName } from "../lib/packageName.js";
+import { pkgFromUserAgent } from "../lib/pkg.js";
 
 const cwd = process.cwd();
-
-const TEMPLATES = frameWorks
-  .map((f): string[] => {
-    return (f.variants && f.variants.map((v) => v.name)) || [f.name];
-  })
-  .reduce((a, b): string[] => {
-    return a.concat(b);
-  }, []);
-
 const renameFiles = {
   _gitignore: ".gitignore",
 };
 
-async function init() {
+async function createApp() {
   let targetDir = argv._[0];
   let template = argv.template || argv.t;
 
@@ -170,31 +165,7 @@ async function init() {
   console.log();
 }
 
-function copy(src: any, dest: any) {
-  const stat = fs.statSync(src);
-  if (stat.isDirectory()) {
-    copyDir(src, dest);
-  } else {
-    fs.copyFileSync(src, dest);
-  }
-}
-
-function isValidPackageName(projectName: string) {
-  return /^(?:@[a-z0-9-*~][a-z0-9-*._~]*\/)?[a-z0-9-~][a-z0-9-._~]*$/.test(
-    projectName,
-  );
-}
-
-function toValidPackageName(projectName: string) {
-  return projectName
-    .trim()
-    .toLowerCase()
-    .replace(/\s+/g, "-")
-    .replace(/^[._]/, "")
-    .replace(/[^a-z0-9-~]+/g, "-");
-}
-
-function copyDir(srcDir: any, destDir: any) {
+export function copyDir(srcDir: any, destDir: any) {
   fs.mkdirSync(destDir, { recursive: true });
   for (const file of fs.readdirSync(srcDir)) {
     const srcFile = path.resolve(srcDir, file);
@@ -223,22 +194,6 @@ function emptyDir(dir: any) {
   }
 }
 
-/**
- * @param {string | undefined} userAgent process.env.npm_config_user_agent
- * @returns object | undefined
- */
-function pkgFromUserAgent(userAgent: string | undefined) {
-  if (!userAgent) {
-    return undefined;
-  }
-  const pkgSpec = userAgent.split(" ")[0];
-  const pkgSpecArr = pkgSpec.split("/");
-  return {
-    name: pkgSpecArr[0],
-    version: pkgSpecArr[1],
-  };
-}
-
-init().catch((e) => {
-  console.error(e);
+createApp().catch((error) => {
+  console.error(error);
 });

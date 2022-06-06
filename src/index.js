@@ -1,23 +1,39 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.copyDir = void 0;
 const fs = require("fs");
 const path = require("path");
 const argv = require("minimist")(process.argv.slice(2), { string: ["_"] });
 const prompts = require("prompts");
-const { yellow, blue, red, reset } = require("kolorist");
-const frameWorks_1 = require("../lib/frameWorks");
+const { red, reset } = require("kolorist");
+const { yellow, blue } = require("kolorist");
+const templates_js_1 = require("../lib/templates.js");
+const copy_js_1 = require("../lib/copy.js");
+const packageName_js_1 = require("../lib/packageName.js");
+const pkg_js_1 = require("../lib/pkg.js");
 const cwd = process.cwd();
-const TEMPLATES = frameWorks_1.frameWorks
-    .map((f) => {
-    return (f.variants && f.variants.map((v) => v.name)) || [f.name];
-})
-    .reduce((a, b) => {
-    return a.concat(b);
-}, []);
 const renameFiles = {
     _gitignore: ".gitignore",
 };
-async function init() {
+const frameWorks = [
+    {
+        name: "vanilla",
+        colour: yellow,
+        variants: [
+            {
+                name: "vanilla",
+                display: "JavaScript",
+                colour: yellow,
+            },
+            {
+                name: "vanilla-ts",
+                display: "TypeScript",
+                colour: blue,
+            },
+        ],
+    },
+];
+async function createApp() {
     let targetDir = argv._[0];
     let template = argv.template || argv.t;
     const defaultProjectName = !targetDir ? "solidjs-application" : targetDir;
@@ -50,20 +66,20 @@ async function init() {
                 name: "overwriteChecker",
             },
             {
-                type: () => (isValidPackageName(targetDir) ? null : "text"),
+                type: () => ((0, packageName_js_1.isValidPackageName)(targetDir) ? null : "text"),
                 name: "packageName",
                 message: reset("Package name:"),
-                initial: () => toValidPackageName(targetDir),
-                validate: (dir) => isValidPackageName(dir) || "Invalid package.json name",
+                initial: () => (0, packageName_js_1.toValidPackageName)(targetDir),
+                validate: (dir) => (0, packageName_js_1.isValidPackageName)(dir) || "Invalid package.json name",
             },
             {
-                type: template && TEMPLATES.includes(template) ? null : "select",
+                type: template && templates_js_1.TEMPLATES.includes(template) ? null : "select",
                 name: "framework",
-                message: typeof template === "string" && !TEMPLATES.includes(template)
+                message: typeof template === "string" && !templates_js_1.TEMPLATES.includes(template)
                     ? reset(`"${template}" isn't a valid template. Please choose from below: `)
                     : reset("Select a framework:"),
                 initial: 0,
-                choices: frameWorks_1.frameWorks.map((framework) => {
+                choices: frameWorks.map((framework) => {
                     const frameworkColor = framework.colour;
                     return {
                         title: frameworkColor(framework.name),
@@ -115,7 +131,7 @@ async function init() {
             fs.writeFileSync(targetPath, content);
         }
         else {
-            copy(path.join(templateDir, file), targetPath);
+            (0, copy_js_1.copy)(path.join(templateDir, file), targetPath);
         }
     };
     const files = fs.readdirSync(templateDir);
@@ -125,7 +141,7 @@ async function init() {
     const pkg = require(path.join(templateDir, `package.json`));
     pkg.name = packageName || targetDir;
     write("package.json", JSON.stringify(pkg, null, 2));
-    const pkgInfo = pkgFromUserAgent(process.env.npm_config_user_agent);
+    const pkgInfo = (0, pkg_js_1.pkgFromUserAgent)(process.env.npm_config_user_agent);
     const pkgManager = pkgInfo ? pkgInfo.name : "npm";
     console.log(`\nDone. Now run:\n`);
     if (root !== cwd) {
@@ -143,34 +159,15 @@ async function init() {
     }
     console.log();
 }
-function copy(src, dest) {
-    const stat = fs.statSync(src);
-    if (stat.isDirectory()) {
-        copyDir(src, dest);
-    }
-    else {
-        fs.copyFileSync(src, dest);
-    }
-}
-function isValidPackageName(projectName) {
-    return /^(?:@[a-z0-9-*~][a-z0-9-*._~]*\/)?[a-z0-9-~][a-z0-9-._~]*$/.test(projectName);
-}
-function toValidPackageName(projectName) {
-    return projectName
-        .trim()
-        .toLowerCase()
-        .replace(/\s+/g, "-")
-        .replace(/^[._]/, "")
-        .replace(/[^a-z0-9-~]+/g, "-");
-}
 function copyDir(srcDir, destDir) {
     fs.mkdirSync(destDir, { recursive: true });
     for (const file of fs.readdirSync(srcDir)) {
         const srcFile = path.resolve(srcDir, file);
         const destFile = path.resolve(destDir, file);
-        copy(srcFile, destFile);
+        (0, copy_js_1.copy)(srcFile, destFile);
     }
 }
+exports.copyDir = copyDir;
 function isEmpty(path) {
     const files = fs.readdirSync(path);
     return files.length === 0 || (files.length === 1 && files[0] === ".git");
@@ -190,21 +187,6 @@ function emptyDir(dir) {
         }
     }
 }
-/**
- * @param {string | undefined} userAgent process.env.npm_config_user_agent
- * @returns object | undefined
- */
-function pkgFromUserAgent(userAgent) {
-    if (!userAgent) {
-        return undefined;
-    }
-    const pkgSpec = userAgent.split(" ")[0];
-    const pkgSpecArr = pkgSpec.split("/");
-    return {
-        name: pkgSpecArr[0],
-        version: pkgSpecArr[1],
-    };
-}
-init().catch((e) => {
-    console.error(e);
+createApp().catch((error) => {
+    console.error(error);
 });

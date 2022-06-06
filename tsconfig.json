@@ -27,6 +27,10 @@
     "src/ts-uvu",
     "src/ts-vitest",
     "src/ts-windicss",
-    "lib"
+    "./lib/copy.ts",
+    "./lib/frameWorks.ts",
+    "./lib/packageName.ts",
+    "./lib/pkg.ts",
+    "./lib/templates.ts"
   ]
 }

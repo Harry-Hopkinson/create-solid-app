@@ -105,3 +105,13 @@ dist
 
 # Javascript Files
 dist
+
+# Src Javascript Files
+src/index.js
+
+# Lib Javascript Files
+lib/copy.js
+lib/frameWorks.js
+lib/packageName.js
+lib/pkg.js
+lib/templates.js

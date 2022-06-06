@@ -1,4 +1,4 @@
-const { yellow, blue, red, reset } = require("kolorist");
+const { yellow, blue } = require("kolorist");
 
 export const frameWorks = [
   {
