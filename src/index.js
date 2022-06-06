@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.copyDir = void 0;
@@ -6,10 +7,10 @@ const path = require("path");
 const argv = require("minimist")(process.argv.slice(2), { string: ["_"] });
 const prompts = require("prompts");
 const { red, reset } = require("kolorist");
-const frameWorks_js_1 = require("../lib/frameWorks.js");
-const templates_js_1 = require("../lib/templates.js");
-const packageName_js_1 = require("../lib/packageName.js");
-const pkg_js_1 = require("../lib/pkg.js");
+const frameWorks_1 = require("../lib/frameWorks");
+const templates_1 = require("../lib/templates");
+const packageName_1 = require("../lib/packageName");
+const pkg_1 = require("../lib/pkg");
 const cwd = process.cwd();
 const renameFiles = {
     _gitignore: ".gitignore",
@@ -47,20 +48,20 @@ async function createApp() {
                 name: "overwriteChecker",
             },
             {
-                type: () => ((0, packageName_js_1.isValidPackageName)(targetDir) ? null : "text"),
+                type: () => ((0, packageName_1.isValidPackageName)(targetDir) ? null : "text"),
                 name: "packageName",
                 message: reset("Package name:"),
-                initial: () => (0, packageName_js_1.toValidPackageName)(targetDir),
-                validate: (dir) => (0, packageName_js_1.isValidPackageName)(dir) || "Invalid package.json name",
+                initial: () => (0, packageName_1.toValidPackageName)(targetDir),
+                validate: (dir) => (0, packageName_1.isValidPackageName)(dir) || "Invalid package.json name",
             },
             {
-                type: template && templates_js_1.TEMPLATES.includes(template) ? null : "select",
+                type: template && templates_1.TEMPLATES.includes(template) ? null : "select",
                 name: "framework",
-                message: typeof template === "string" && !templates_js_1.TEMPLATES.includes(template)
+                message: typeof template === "string" && !templates_1.TEMPLATES.includes(template)
                     ? reset(`"${template}" isn't a valid template. Please choose from below: `)
                     : reset("Select a framework:"),
                 initial: 0,
-                choices: frameWorks_js_1.frameWorks.map((framework) => {
+                choices: frameWorks_1.frameWorks.map((framework) => {
                     const frameworkColor = framework.colour;
                     return {
                         title: frameworkColor(framework.name),
@@ -122,7 +123,7 @@ async function createApp() {
     const pkg = require(path.join(templateDir, `package.json`));
     pkg.name = packageName || targetDir;
     write("package.json", JSON.stringify(pkg, null, 2));
-    const pkgInfo = (0, pkg_js_1.pkgFromUserAgent)(process.env.npm_config_user_agent);
+    const pkgInfo = (0, pkg_1.pkgFromUserAgent)(process.env.npm_config_user_agent);
     const pkgManager = pkgInfo ? pkgInfo.name : "npm";
     console.log(`\nDone. Now run:\n`);
     if (root !== cwd) {

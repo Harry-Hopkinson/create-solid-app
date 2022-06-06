@@ -14,5 +14,5 @@ To install the command globally, run the following command:
 
 ```shell
 npm install -g create-solid-app
-create-docusaurus-app
+create-solid-app
 ```

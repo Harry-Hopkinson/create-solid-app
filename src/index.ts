@@ -3,10 +3,10 @@ const path = require("path");
 const argv = require("minimist")(process.argv.slice(2), { string: ["_"] });
 const prompts = require("prompts");
 const { red, reset } = require("kolorist");
-import { frameWorks } from "../lib/frameWorks.js";
-import { TEMPLATES } from "../lib/templates.js";
-import { isValidPackageName, toValidPackageName } from "../lib/packageName.js";
-import { pkgFromUserAgent } from "../lib/pkg.js";
+import { frameWorks } from "../lib/frameWorks";
+import { TEMPLATES } from "../lib/templates";
+import { isValidPackageName, toValidPackageName } from "../lib/packageName";
+import { pkgFromUserAgent } from "../lib/pkg";
 
 const cwd = process.cwd();
 const renameFiles = {

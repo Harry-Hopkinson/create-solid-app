@@ -1,4 +1,4 @@
-src/js-vitest
+src/template-js-vitest
 src/template-vanilla
 src/template-vanilla-ts
 src/ts-bootstrap
@@ -9,7 +9,11 @@ src/ts-sass
 src/ts-tailwindcss
 src/ts-unocss
 src/ts-uvu
-src/ts-vitest
+src/template-ts-vitest
 src/ts-windicss
 dist
 src/index.js
+lib/frameWorks.js
+lib/packageName.js
+lib/pkg.js
+lib/templates.js
