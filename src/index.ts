@@ -156,12 +156,6 @@ async function createApp() {
       console.log("  yarn");
       console.log("  yarn start");
       break;
-    case "npm":
-      console.log("  npm install");
-      console.log("  npm run start");
-    case "pnpm":
-      console.log("  pnpm install");
-      console.log("  pnpm start");
     default:
       console.log(`  ${pkgManager} install`);
       console.log(`  ${pkgManager} run start`);
