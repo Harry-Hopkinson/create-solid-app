@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/Harry-Hopkinson/create-solid-app/actions?query=workflow%3AProd+branch%3Amain">
-    <img alt="Github Actions Build Status" src="https://img.shields.io/github/workflow/status/Harry-Hopkinson/create-solid-app/Prod?label=Prod&style=flat-square"></a>
+    <img alt="Github Actions Build Status" src="https://img.shields.io/github/workflow/status/Harry-Hopkinson/create-solid-app/"></a>
   <a href="https://github.com/prettier/prettier/actions?query=workflow%3ADev+branch%3Amain">
     <img alt="Github Actions Build Status" src="https://img.shields.io/github/workflow/status/Harry-Hopkinson/create-solid-app/Dev?label=Dev&style=flat-square"></a>
   <a href="https://github.com/Harry-Hopkinson/create-solid-app/actions?query=workflow%3ALint+branch%3Amain">
