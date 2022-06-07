@@ -7,7 +7,8 @@ src/template-ts-jest
 src/template-js-jest
 src/template-ts-minimal
 src/template-js-minimal
-src/ts-router
+src/template-ts-router
+src/template-js-router
 src/ts-sass
 src/ts-tailwindcss
 src/ts-unocss
