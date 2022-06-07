@@ -1,4 +1,6 @@
-![Create-Solid-App Banner](images/logo.svg)
+<p align="center">
+  <img src="images/logo.svg">
+</p>
 
 <h2 align="center">Scaffold a Solid App</h2>
 
