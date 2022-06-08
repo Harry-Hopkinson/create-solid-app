@@ -1,4 +1,11 @@
-import { green, magenta, lightRed, lightCyan, white } from "kolorist";
+import {
+  green,
+  magenta,
+  lightRed,
+  lightCyan,
+  white,
+  lightMagenta,
+} from "kolorist";
 
 const { yellow, blue } = require("kolorist");
 
@@ -94,6 +101,22 @@ export const frameWorks = [
       },
       {
         name: "ts-router",
+        display: "TypeScript",
+        colour: blue,
+      },
+    ],
+  },
+  {
+    name: "sass",
+    colour: lightMagenta,
+    variants: [
+      {
+        name: "js-sass",
+        display: "JavaScript",
+        colour: yellow,
+      },
+      {
+        name: "ts-sass",
         display: "TypeScript",
         colour: blue,
       },

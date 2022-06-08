@@ -9,7 +9,8 @@ src/template-ts-minimal
 src/template-js-minimal
 src/template-ts-router
 src/template-js-router
-src/ts-sass
+src/template-js-sass
+src/template-ts-sass
 src/ts-tailwindcss
 src/ts-unocss
 src/ts-uvu
