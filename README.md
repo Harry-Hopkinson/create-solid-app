@@ -24,3 +24,7 @@ To install the command globally, run the following command:
 npm install -g create-solid-app
 create-solid-app
 ```
+
+## Contributing
+
+Check out the [CONTRIBUTING.md](CONTRIBUTING.md)
