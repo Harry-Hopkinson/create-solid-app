@@ -13,7 +13,8 @@ src/template-js-sass
 src/template-ts-sass
 src/template-ts-tailwindcss
 src/template-js-tailwindcss
-src/ts-unocss
+src/template-ts-unocss
+src/template-js-unocss
 src/ts-uvu
 src/template-ts-vitest
 src/ts-windicss

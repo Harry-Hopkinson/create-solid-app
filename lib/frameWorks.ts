@@ -5,6 +5,7 @@ import {
   lightCyan,
   white,
   lightMagenta,
+  gray,
 } from "kolorist";
 
 const { yellow, blue } = require("kolorist");
@@ -133,6 +134,22 @@ export const frameWorks = [
       },
       {
         name: "ts-tailwindcss",
+        display: "TypeScript",
+        colour: blue,
+      },
+    ],
+  },
+  {
+    name: "unocss",
+    colour: gray,
+    variants: [
+      {
+        name: "js-unocss",
+        display: "JavaScript",
+        colour: yellow,
+      },
+      {
+        name: "ts-unocss",
         display: "TypeScript",
         colour: blue,
       },

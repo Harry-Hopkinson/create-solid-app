@@ -2,7 +2,7 @@
 
 ## Clone the Github Repostiory
 
-```shell
+```properties
 git clone https://github.com/Harry-Hopkinson/create-solid-app
 ```
 
@@ -10,13 +10,13 @@ git clone https://github.com/Harry-Hopkinson/create-solid-app
 
 ### Yarn
 
-```shell
+```properties
 yarn install
 ```
 
 ### NPM
 
-```shell
+```properties
 npm install
 ```
 
@@ -24,12 +24,12 @@ npm install
 
 ### Yarn
 
-```shell
+```properties
 yarn build && yarn start
 ```
 
 ### NPM
 
-```shell
+```properties
 npm run build && npm run start
 ```
