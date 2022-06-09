@@ -11,7 +11,8 @@ src/template-ts-router
 src/template-js-router
 src/template-js-sass
 src/template-ts-sass
-src/ts-tailwindcss
+src/template-ts-tailwindcss
+src/template-js-tailwindcss
 src/ts-unocss
 src/ts-uvu
 src/template-ts-vitest

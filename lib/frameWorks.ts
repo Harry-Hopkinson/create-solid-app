@@ -122,4 +122,20 @@ export const frameWorks = [
       },
     ],
   },
+  {
+    name: "tailwindcss",
+    colour: blue,
+    variants: [
+      {
+        name: "js-tailwindcss",
+        display: "JavaScript",
+        colour: yellow,
+      },
+      {
+        name: "ts-tailwindcss",
+        display: "TypeScript",
+        colour: blue,
+      },
+    ],
+  },
 ];
