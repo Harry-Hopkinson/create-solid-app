@@ -21,6 +21,6 @@
     "vitest": "0.14.2"
   },
   "dependencies": {
-    "solid-js": "1.4.3"
+    "solid-js": "1.4.4"
   }
 }
