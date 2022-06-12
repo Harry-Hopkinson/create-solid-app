@@ -29,7 +29,7 @@
     "src/ts-vitest",
     "src/ts-windicss",
     "./lib/copy.ts",
-    "./lib/frameWorks.ts",
+    "lib/templates.ts",
     "./lib/packageName.ts",
     "./lib/pkg.ts",
     "./lib/templates.ts"

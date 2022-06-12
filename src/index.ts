@@ -3,8 +3,7 @@ const path = require("path");
 const argv = require("minimist")(process.argv.slice(2), { string: ["_"] });
 const prompts = require("prompts");
 const { red, reset } = require("kolorist");
-import { frameWorks } from "../lib/frameWorks";
-import { TEMPLATES } from "../lib/templates";
+import { templates, TEMPLATES } from "../lib/templates";
 import { isValidPackageName, toValidPackageName } from "../lib/packageName";
 import { pkgFromUserAgent } from "../lib/pkg";
 
@@ -70,11 +69,11 @@ async function createApp() {
                 )
               : reset("Select a framework:"),
           initial: 0,
-          choices: frameWorks.map((framework) => {
-            const frameworkColor = framework.colour;
+          choices: templates.map((template) => {
+            const frameworkColor = template.colour;
             return {
-              title: frameworkColor(framework.name),
-              value: framework,
+              title: frameworkColor(template.name),
+              value: template,
             };
           }),
         },

@@ -20,7 +20,8 @@ src/template-ts-vitest
 src/ts-windicss
 dist
 src/index.js
-lib/frameWorks.js
+lib/templates.js
+lib/templates.ts
 lib/packageName.js
 lib/pkg.js
 lib/templates.js

@@ -7,7 +7,6 @@ const path = require("path");
 const argv = require("minimist")(process.argv.slice(2), { string: ["_"] });
 const prompts = require("prompts");
 const { red, reset } = require("kolorist");
-const frameWorks_1 = require("../lib/frameWorks");
 const templates_1 = require("../lib/templates");
 const packageName_1 = require("../lib/packageName");
 const pkg_1 = require("../lib/pkg");
@@ -61,11 +60,11 @@ async function createApp() {
                     ? reset(`"${template}" isn't a valid template. Please choose from below: `)
                     : reset("Select a framework:"),
                 initial: 0,
-                choices: frameWorks_1.frameWorks.map((framework) => {
-                    const frameworkColor = framework.colour;
+                choices: templates_1.templates.map((template) => {
+                    const frameworkColor = template.colour;
                     return {
-                        title: frameworkColor(framework.name),
-                        value: framework,
+                        title: frameworkColor(template.name),
+                        value: template,
                     };
                 }),
             },
