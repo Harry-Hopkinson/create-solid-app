@@ -1,6 +1,6 @@
 {
   "name": "create-solid-app",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "description": "CLI to create a Solid Application.",
   "main": "src/index.js",
   "bin": "src/index.js",
@@ -33,7 +33,7 @@
   },
   "homepage": "https://github.com/Harry-Hopkinson/create-solid-app#readme",
   "devDependencies": {
-    "@types/node": "17.0.39",
+    "@types/node": "17.0.42",
     "@typescript-eslint/eslint-plugin": "5.27.1",
     "@typescript-eslint/parser": "5.27.1",
     "eslint": "8.17.0",
