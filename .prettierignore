@@ -16,6 +16,7 @@ src/template-js-tailwindcss
 src/template-ts-unocss
 src/template-js-unocss
 src/ts-uvu
+src/js-uvu
 src/template-ts-vitest
 src/ts-windicss
 dist

@@ -1,0 +1,27 @@
+{
+  "name": "vite-template-solid",
+  "version": "0.0.0",
+  "description": "",
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "test": "uvu -r solid-register"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "7.18.5",
+    "babel-preset-solid": "1.4.4",
+    "jsdom": "19.0.0",
+    "solid-dom-testing": "0.0.3",
+    "solid-register": "0.2.5",
+    "solid-testing-library": "0.3.0",
+    "uvu": "0.5.3",
+    "vite": "2.9.12",
+    "vite-plugin-solid": "2.2.6"
+  },
+  "dependencies": {
+    "solid-js": "1.4.4"
+  }
+}

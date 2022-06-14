@@ -155,6 +155,22 @@ export const templates = [
       },
     ],
   },
+  {
+    name: "uvu",
+    colour: magenta,
+    variants: [
+      {
+        name: "js-uvu",
+        display: "JavaScript",
+        colour: yellow,
+      },
+      {
+        name: "ts-uvu",
+        display: "TypeScript",
+        colour: blue,
+      },
+    ],
+  },
 ];
 
 export const TEMPLATES = templates
