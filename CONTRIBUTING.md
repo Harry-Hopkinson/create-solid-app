@@ -11,7 +11,7 @@ git clone https://github.com/Harry-Hopkinson/create-solid-app
 ### Yarn
 
 ```properties
-yarn install
+yarn
 ```
 
 ### NPM
