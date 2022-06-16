@@ -18,11 +18,11 @@ src/template-js-unocss
 src/template-ts-uvu
 src/template-js-uvu
 src/template-ts-vitest
-src/ts-windicss
+src/template-ts-windicss
+src/template-js-windicss
 dist
 src/index.js
 lib/templates.js
-lib/templates.ts
 lib/packageName.js
 lib/pkg.js
 lib/templates.js

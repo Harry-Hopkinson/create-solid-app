@@ -92,6 +92,22 @@ export const templates = [
     ],
   },
   {
+    name: "windicss",
+    colour: blue,
+    variants: [
+      {
+        name: "js-windicss",
+        display: "JavaScript",
+        colour: yellow,
+      },
+      {
+        name: "ts-windicss",
+        display: "TypeScript",
+        colour: blue,
+      },
+    ],
+  },
+  {
     name: "router",
     colour: white,
     variants: [

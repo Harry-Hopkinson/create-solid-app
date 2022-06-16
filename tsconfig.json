@@ -12,8 +12,8 @@
   },
   "include": ["./src/index.ts"],
   "exclude": [
-    "./node_modules",
-    "./dist",
+    "node_modules",
+    "dist",
     "/src/template-js-vitest",
     "src/template-vanilla",
     "src/template-vanilla-ts",
@@ -28,10 +28,10 @@
     "src/ts-uvu",
     "src/ts-vitest",
     "src/ts-windicss",
-    "./lib/copy.ts",
+    "lib/copy.ts",
     "lib/templates.ts",
-    "./lib/packageName.ts",
-    "./lib/pkg.ts",
-    "./lib/templates.ts"
+    "lib/packageName.ts",
+    "lib/pkg.ts",
+    "lib/templates.ts"
   ]
 }
