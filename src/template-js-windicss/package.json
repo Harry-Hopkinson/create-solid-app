@@ -9,7 +9,7 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "vite": "2.9.13",
+    "vite": "2.9.14",
     "vite-plugin-solid": "2.2.6",
     "vite-plugin-windicss": "1.8.6"
   },
