@@ -11,7 +11,7 @@
   "devDependencies": {
     "@unocss/preset-mini": "0.44.3",
     "@unocss/vite": "0.44.4",
-    "vite": "3.0.1",
+    "vite": "3.0.2",
     "vite-plugin-solid": "2.3.0"
   },
   "dependencies": {
