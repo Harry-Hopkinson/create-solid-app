@@ -151,10 +151,7 @@ function copyDir(srcDir, destDir) {
 exports.copyDir = copyDir;
 function copy(src, dest) {
     const stat = fs.statSync(src);
-    if (stat.isDirectory()) {
-        return copyDir(src, dest);
-    }
-    return fs.copyFileSync(src, dest);
+    return stat.isDirectory() ? copyDir(src, dest) : fs.copyFileSync(src, dest);
 }
 function isEmpty(path) {
     const files = fs.readdirSync(path);

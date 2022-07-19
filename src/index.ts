@@ -174,10 +174,7 @@ export function copyDir(srcDir: any, destDir: any) {
 
 function copy(src: any, dest: any) {
   const stat = fs.statSync(src);
-  if (stat.isDirectory()) {
-    return copyDir(src, dest);
-  }
-  return fs.copyFileSync(src, dest);
+  return stat.isDirectory() ? copyDir(src, dest) : fs.copyFileSync(src, dest);
 }
 
 function isEmpty(path: any) {
