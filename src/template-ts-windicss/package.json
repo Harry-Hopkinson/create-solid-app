@@ -15,6 +15,6 @@
     "vite-plugin-windicss": "1.8.7"
   },
   "dependencies": {
-    "solid-js": "1.5.3"
+    "solid-js": "1.5.4"
   }
 }
