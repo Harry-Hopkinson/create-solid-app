@@ -21,7 +21,7 @@
     "@babel/preset-env": "7.19.0",
     "@testing-library/jest-dom": "5.16.5",
     "babel-preset-jest": "29.0.2",
-    "babel-preset-solid": "1.5.3",
+    "babel-preset-solid": "1.5.4",
     "babel-jest": "29.0.2",
     "jest": "29.0.2",
     "jest-environment-jsdom": "29.0.2",
