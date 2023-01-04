@@ -12,7 +12,7 @@
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "7.20.7",
-    "babel-preset-solid": "1.6.6",
+    "babel-preset-solid": "1.6.7",
     "jsdom": "20.0.3",
     "solid-dom-testing": "0.0.3",
     "solid-register": "0.2.5",
