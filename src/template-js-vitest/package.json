@@ -18,7 +18,7 @@
     "solid-testing-library": "0.5.1",
     "vite": "4.1.4",
     "vite-plugin-solid": "2.5.0",
-    "vitest": "0.28.5"
+    "vitest": "0.29.1"
   },
   "dependencies": {
     "solid-js": "1.6.11"
