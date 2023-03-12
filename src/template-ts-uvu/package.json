@@ -13,7 +13,7 @@
   "devDependencies": {
     "@babel/core": "7.21.0",
     "babel-preset-solid": "1.6.13",
-    "jsdom": "21.1.0",
+    "jsdom": "21.1.1",
     "solid-dom-testing": "0.0.3",
     "solid-register": "0.2.5",
     "solid-testing-library": "0.5.1",
