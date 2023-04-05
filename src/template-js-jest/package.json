@@ -30,7 +30,7 @@
     "solid-jest": "0.2.0",
     "solid-testing-library": "0.5.1",
     "vite": "4.2.1",
-    "vite-plugin-solid": "2.6.1"
+    "vite-plugin-solid": "2.7.0"
   },
   "dependencies": {
     "solid-js": "1.7.2"
