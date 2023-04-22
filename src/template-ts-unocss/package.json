@@ -9,7 +9,7 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@unocss/preset-mini": "0.51.5",
+    "@unocss/preset-mini": "0.51.6",
     "@unocss/vite": "0.51.5",
     "typescript": "5.0.4",
     "vite": "4.3.1",
