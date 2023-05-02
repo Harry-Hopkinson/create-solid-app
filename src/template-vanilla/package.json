@@ -10,7 +10,7 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "vite": "4.3.3",
+    "vite": "4.3.4",
     "vite-plugin-solid": "2.7.0"
   },
   "dependencies": {
