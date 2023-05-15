@@ -32,7 +32,7 @@
     "solid-jest": "0.2.0",
     "solid-testing-library": "0.5.1",
     "typescript": "5.0.4",
-    "vite": "4.3.5",
+    "vite": "4.3.6",
     "vite-plugin-solid": "2.7.0"
   },
   "dependencies": {
