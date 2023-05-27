@@ -14,7 +14,7 @@
   "license": "MIT",
   "devDependencies": {
     "@testing-library/jest-dom": "5.16.5",
-    "jsdom": "22.0.0",
+    "jsdom": "22.1.0",
     "solid-testing-library": "0.5.1",
     "typescript": "5.0.4",
     "vite": "4.3.9",
