@@ -16,7 +16,7 @@
     "@testing-library/jest-dom": "5.16.5",
     "jsdom": "22.1.0",
     "solid-testing-library": "0.5.1",
-    "typescript": "5.1.5",
+    "typescript": "5.1.6",
     "vite": "4.3.9",
     "vite-plugin-solid": "2.7.0",
     "vitest": "0.32.2"
