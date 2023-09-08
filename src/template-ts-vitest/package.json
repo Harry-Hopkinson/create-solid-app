@@ -19,7 +19,7 @@
     "typescript": "5.2.2",
     "vite": "4.4.9",
     "vite-plugin-solid": "2.7.0",
-    "vitest": "0.34.3"
+    "vitest": "0.34.4"
   },
   "dependencies": {
     "solid-js": "1.7.11"
