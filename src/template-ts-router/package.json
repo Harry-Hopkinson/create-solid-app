@@ -11,7 +11,7 @@
   "devDependencies": {
     "vite": "5.0.0",
     "vite-plugin-solid": "2.7.2",
-    "vite-plugin-windicss": "1.9.1"
+    "vite-plugin-windicss": "1.9.2"
   },
   "dependencies": {
     "solid-app-router": "0.4.2",
