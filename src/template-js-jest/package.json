@@ -17,8 +17,8 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "7.23.5",
-    "@babel/preset-env": "7.23.5",
+    "@babel/core": "7.23.6",
+    "@babel/preset-env": "7.23.6",
     "@testing-library/jest-dom": "6.1.5",
     "babel-preset-jest": "29.6.3",
     "babel-preset-solid": "1.8.6",
