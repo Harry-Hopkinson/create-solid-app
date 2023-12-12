@@ -29,7 +29,7 @@
     "regenerator-runtime": "0.14.0",
     "solid-jest": "0.2.0",
     "solid-testing-library": "0.5.1",
-    "vite": "5.0.7",
+    "vite": "5.0.8",
     "vite-plugin-solid": "2.8.0"
   },
   "dependencies": {
