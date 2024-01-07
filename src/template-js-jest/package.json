@@ -25,7 +25,7 @@
     "babel-jest": "29.7.0",
     "jest": "29.7.0",
     "jest-environment-jsdom": "29.7.0",
-    "jsdom": "23.1.0",
+    "jsdom": "23.2.0",
     "regenerator-runtime": "0.14.1",
     "solid-jest": "0.2.0",
     "solid-testing-library": "0.5.1",
