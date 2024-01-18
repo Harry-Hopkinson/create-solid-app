@@ -11,7 +11,7 @@
   "devDependencies": {
     "sass": "1.69.7",
     "vite": "5.0.11",
-    "vite-plugin-solid": "2.8.0"
+    "vite-plugin-solid": "2.8.1"
   },
   "dependencies": {
     "@popperjs/core": "2.11.8",
