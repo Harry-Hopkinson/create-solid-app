@@ -19,7 +19,7 @@
   "devDependencies": {
     "@babel/core": "7.23.7",
     "@babel/preset-env": "7.23.8",
-    "@testing-library/jest-dom": "6.2.0",
+    "@testing-library/jest-dom": "6.2.1",
     "babel-preset-jest": "29.6.3",
     "babel-preset-solid": "1.8.9",
     "babel-jest": "29.7.0",
