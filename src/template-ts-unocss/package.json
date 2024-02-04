@@ -9,8 +9,8 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@unocss/preset-mini": "0.58.4",
-    "@unocss/vite": "0.58.4",
+    "@unocss/preset-mini": "0.58.5",
+    "@unocss/vite": "0.58.5",
     "typescript": "5.3.3",
     "vite": "5.0.12",
     "vite-plugin-solid": "2.9.1"
