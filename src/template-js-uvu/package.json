@@ -18,7 +18,7 @@
     "solid-register": "0.2.5",
     "solid-testing-library": "0.5.1",
     "uvu": "0.5.6",
-    "vite": "5.1.4",
+    "vite": "5.1.5",
     "vite-plugin-solid": "2.10.1"
   },
   "dependencies": {
