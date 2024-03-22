@@ -19,7 +19,7 @@
     "solid-testing-library": "0.5.1",
     "typescript": "5.4.3",
     "uvu": "0.5.6",
-    "vite": "5.2.2",
+    "vite": "5.2.3",
     "vite-plugin-solid": "2.10.2"
   },
   "dependencies": {
