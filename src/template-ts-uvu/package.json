@@ -17,7 +17,7 @@
     "solid-dom-testing": "0.0.3",
     "solid-register": "0.2.5",
     "solid-testing-library": "0.5.1",
-    "typescript": "5.4.4",
+    "typescript": "5.4.5",
     "uvu": "0.5.6",
     "vite": "5.2.8",
     "vite-plugin-solid": "2.10.2"

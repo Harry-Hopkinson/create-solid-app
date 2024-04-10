@@ -9,7 +9,7 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "typescript": "5.4.4",
+    "typescript": "5.4.5",
     "vite": "5.2.8",
     "vite-plugin-solid": "2.10.2",
     "vite-plugin-windicss": "1.9.3"
