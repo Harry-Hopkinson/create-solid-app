@@ -9,7 +9,7 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "sass": "1.79.3",
+    "sass": "1.79.4",
     "vite": "5.4.8",
     "vite-plugin-solid": "2.10.2"
   },
