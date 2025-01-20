@@ -12,7 +12,7 @@
     "@unocss/preset-mini": "65.4.2",
     "@unocss/vite": "65.4.2",
     "typescript": "5.7.3",
-    "vite": "6.0.7",
+    "vite": "6.0.9",
     "vite-plugin-solid": "2.11.0"
   },
   "dependencies": {
